@@ -47,3 +47,103 @@ int main() {
 
     return 0;
 }
+#3
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    cout << "Введіть два числа: ";
+    cin >> a >> b;
+
+    double sum = a + b;
+    double product = a * b;
+    double average = sum / 2.0;
+
+    cout << "Сума: " << sum << endl;
+    cout << "Добуток: " << product << endl;
+    cout << "Середнє арифметичне: " << average << endl;
+
+    return 0;
+}
+#4
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b, c;
+    cout << "Введіть три числа: ";
+    cin >> a >> b >> c;
+
+    double sum = a + b + c;
+    double product = a * b * c;
+    double average = sum / 3.0;
+
+    cout << "Сума: " << sum << endl;
+    cout << "Добуток: " << product << endl;
+    cout << "Середнє арифметичне: " << average << endl;
+
+    return 0;
+}
+#5
+#include <iostream>
+using namespace std;
+
+int main() {
+    double price, discount;
+    int quantity;
+
+    cout << "Введіть вартість одного ноутбука: ";
+    cin >> price;
+    cout << "Введіть кількість: ";
+    cin >> quantity;
+    cout << "Введіть відсоток знижки: ";
+    cin >> discount;
+
+    double total = price * quantity;
+    double totalWithDiscount = total - (total * discount / 100.0);
+
+    cout << "Загальна сума замовлення зі знижкою: " << totalWithDiscount << endl;
+
+    return 0;
+}
+#6
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sales;
+    cout << "Введіть загальну суму продажів: ";
+    cin >> sales;
+
+    double salary = 100 + (sales * 0.05);
+
+    cout << "Зарплата менеджера: " << salary << "$" << endl;
+
+    return 0;
+}
+#7
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sizeGB, speed;
+    cout << "Введіть розмір файлу (ГБ): ";
+    cin >> sizeGB;
+    cout << "Введіть швидкість інтернету (біт/с): ";
+    cin >> speed;
+
+    double sizeBits = sizeGB * 1024 * 1024 * 1024 * 8;
+    long long totalSeconds = static_cast<long long>(sizeBits / speed);
+
+    int hours = totalSeconds / 3600;
+    int minutes = (totalSeconds % 3600) / 60;
+    int seconds = totalSeconds % 60;
+
+    cout << "Файл завантажиться за: "
+        << hours << " год "
+        << minutes << " хв "
+        << seconds << " сек" << endl;
+
+    return 0;
+}
